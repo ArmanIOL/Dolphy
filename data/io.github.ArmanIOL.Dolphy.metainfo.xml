@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.ArmanIOL.Dolphy</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Dolphy</name>
+  <summary>GTK4 file manager inspired by KDE Dolphin</summary>
+  <description>
+    <p>
+      Dolphy is a GTK4 file manager that reproduces the structure and workflow of
+      KDE Dolphin while staying native to the GNOME/GTK stack.
+    </p>
+    <p>
+      The current release provides breadcrumb navigation, a Dolphin-style
+      sidebar, a three-column file view and a context menu for files and folders.
+    </p>
+  </description>
+  <launchable type="desktop-id">io.github.ArmanIOL.Dolphy.desktop</launchable>
+  <url type="homepage">https://github.com/ArmanIOL/Dolphy</url>
+  <developer id="io.github.armaniol">
+    <name>ArmanIOL</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.2.0" date="2026-10-27">
+      <description>
+        <p>High-fidelity Dolphin-style layout with a GTK4 ColumnView.</p>
+      </description>
+    </release>
+  </releases>
+</component>

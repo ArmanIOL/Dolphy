@@ -1,0 +1,34 @@
+# Maintainer: ArmanIOL <ArmanIOL@users.noreply.github.com>
+# Local package build: run `makepkg -f` from the packaging/ directory.
+# The PKGBUILD uses the checkout that contains this directory, so it does not
+# download a release tarball and works with private repositories as well.
+
+pkgname=dolphy
+pkgver=0.2.0
+pkgrel=1
+pkgdesc="GTK4 file manager inspired by KDE Dolphin"
+arch=('x86_64')
+url="https://github.com/ArmanIOL/Dolphy"
+license=('GPL-3.0-or-later')
+depends=('gtk4' 'glib2' 'gcc-libs')
+makedepends=('cargo' 'rust')
+source=()
+sha256sums=()
+
+build() {
+    cd "$startdir/.."
+    cargo build --release --locked
+}
+
+package() {
+    local src="$startdir/.."
+
+    install -Dm755 "$src/target/release/dolphy" "$pkgdir/usr/bin/dolphy"
+    install -Dm644 "$src/data/io.github.ArmanIOL.Dolphy.desktop" \
+        "$pkgdir/usr/share/applications/io.github.ArmanIOL.Dolphy.desktop"
+    install -Dm644 "$src/data/io.github.ArmanIOL.Dolphy.svg" \
+        "$pkgdir/usr/share/icons/hicolor/scalable/apps/io.github.ArmanIOL.Dolphy.svg"
+    install -Dm644 "$src/data/io.github.ArmanIOL.Dolphy.metainfo.xml" \
+        "$pkgdir/usr/share/metainfo/io.github.ArmanIOL.Dolphy.metainfo.xml"
+    install -Dm644 "$src/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

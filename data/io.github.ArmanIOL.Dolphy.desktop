@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Dolphy
+GenericName=File Manager
+Comment=GTK4 file manager inspired by KDE Dolphin
+Exec=dolphy
+Icon=io.github.ArmanIOL.Dolphy
+Terminal=false
+Type=Application
+Categories=System;FileManager;FileTools;GTK;
+Keywords=file;manager;files;folder;dolphin;browser;
+StartupNotify=true
+StartupWMClass=io.github.ArmanIOL.Dolphy
