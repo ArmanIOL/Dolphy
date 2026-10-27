@@ -138,6 +138,11 @@ install.sh                  user/system installer
 - Places editing, recent files, mounted volumes from GIO
 - Fully self-contained AppImage and Flatpak builds
 
+
+## Notice ##
+
+This application was written entirely by artificial intelligence—for my own personal use; I am not distributing it. Please be aware that the application may be unstable!
+
 ## License
 
 GPL-3.0-or-later. See `LICENSE`.
