@@ -1804,9 +1804,11 @@ fn sidebar_click_over_header(row: &ListBoxRow, reference: &impl IsA<gtk::Widget>
     if !first.has_css_class("group-label") {
         return false;
     }
+    // The header is the first child of the row. Include the area above it
+    // (row padding and the header's top margin) in the inert header zone.
     first
         .compute_bounds(reference)
-        .is_some_and(|bounds| y >= bounds.y() as f64 && y < (bounds.y() + bounds.height()) as f64)
+        .is_some_and(|bounds| y < (bounds.y() + bounds.height() + 2.0) as f64)
 }
 
 fn section_header_text(section: SectionId, hidden: bool) -> String {
